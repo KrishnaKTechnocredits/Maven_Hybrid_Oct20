@@ -8,12 +8,12 @@ public class TestNGListener implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext result) {
-		System.out.println("On Finish");
+		System.out.println("Test Execuiton is about to finish");
 	}
 
 	@Override
 	public void onStart(ITestContext result) {
-		System.out.println("On Start");
+		System.out.println("Test Execuiton is about to start");
 	}
 
 	@Override
