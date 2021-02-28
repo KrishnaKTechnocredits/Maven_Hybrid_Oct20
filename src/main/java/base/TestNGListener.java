@@ -4,8 +4,6 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import base.PredefinedActions;
-
 public class TestNGListener implements ITestListener {
 
 	@Override
@@ -25,7 +23,7 @@ public class TestNGListener implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		PredefinedActions.capatureScreenShot(result);
+		PredefinedActions.capatureScreenShot(result.getName());
 		PredefinedActions.close();
 		System.out.println("On Fail " + result.getName());
 	}

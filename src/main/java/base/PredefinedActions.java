@@ -137,12 +137,13 @@ public class PredefinedActions {
 			throw new ElementNotInteractableException("Locator - " + locator + ", Element is not enabled");
 	}
 
-	public static void capatureScreenShot(ITestResult result) {
+	public static void capatureScreenShot(String result) {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File file = ts.getScreenshotAs(OutputType.FILE);
 		try {
-			FileUtils.copyFile(file, new File("./takeScreenShot/" + result.getName() + "_" + TimeUtil.getTimeStamp() + ".png"));
-//			Files.copy(file, new File("./takeScreenShot/" + result.getName() + "_" + TimeUtil.getTimeStamp() + ".png"));
+			FileUtils.copyFile(file, new File("./takeScreenShot/" + result + "_" + TimeUtil.getTimeStamp() + ".png"));
+			// Files.copy(file, new File("./takeScreenShot/" + result.getName() + "_" +
+			// TimeUtil.getTimeStamp() + ".png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
