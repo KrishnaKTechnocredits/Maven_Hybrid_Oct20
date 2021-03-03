@@ -6,6 +6,7 @@
       <class name="com.technocredits.automationpractice.MyFristExpTest"/>
       <class name="com.technocredits.automationpractice.MyTestExample1"/>
       <class name="com.technocredits.automationpractice.MyTest"/>
+      <class name="com.technocredits.automationpractice.MyTestExample1"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
